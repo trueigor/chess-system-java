@@ -14,15 +14,16 @@ public class ChessPosition {
 		this.column = column;
 		this.row = row;
 	}
-    // Method begin
+
+	// Method begin
 	protected Position toPosition() {
 		return new Position(8 - row, column - 'a');
 	}
-	
+
 	protected static ChessPosition fromPosition(Position position) {
-		return new ChessPosition((char)('a' + position.getColumn() ), 8 - position.getRow() );
+		return new ChessPosition((char) ('a' + position.getColumn()), 8 - position.getRow());
 	}
-	
+
 	// GET/SET begin
 
 	public char getColumn() {
@@ -32,8 +33,9 @@ public class ChessPosition {
 	public int getRow() {
 		return row;
 	}
-    @Override
-    public String toString() {
-    	return "" + column + row;
-     }
+
+	@Override
+	public String toString() {
+		return "" + column + row;
+	}
 }
